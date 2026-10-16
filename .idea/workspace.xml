@@ -4,14 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6b3e51aa-5ad4-4ee2-9212-ceb45cb754d8" name="Changes" comment="First commit Cinetrack">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/main/Main.java" beforeDir="false" />
+    <list default="true" id="6b3e51aa-5ad4-4ee2-9212-ceb45cb754d8" name="Changes" comment="Add class dans les dossiers">
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/FilmControleur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ReservationControleur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/SalleControleur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/SeanceControleur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/controller/UserControleur.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/FilmDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ReservationDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/SalleDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/SeanceDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modele/Film.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modele/Reservation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modele/Salle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modele/Seance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modele/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/modele/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/FilmService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/SalleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/SeanceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Produits.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modele/Produits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ProduitsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ProduitsService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +63,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,6 +88,9 @@
   &quot;fromUser&quot;: false
 }</component>
   <component name="ProjectId" id="3KRtf1kDWNFznrq73ZX1NFUM3Ns" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -89,6 +107,8 @@
     "git-widget-placeholder": "dev",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "D:/MCCI/2ème année/JJR_Projet/Cinetrack_MVC",
+    "node.js.detected.package.jshint": "true",
+    "node.js.selected.package.jshint": "",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "D:/MCCI/2ème année/JJR_Projet/Cinetrack_MVC/src/main/java/org/example/Main.java",
     "project.structure.last.edited": "Modules",
@@ -158,6 +178,17 @@
                   <entry key="Show.Git.Branches" value="true" />
                 </map>
               </option>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
             </State>
           </value>
         </entry>
@@ -170,8 +201,9 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="First commit Cinetrack branch dev" />
     <MESSAGE value="First commit Cinetrack" />
-    <option name="LAST_COMMIT_MESSAGE" value="First commit Cinetrack" />
+    <MESSAGE value="First commit Cinetrack branch dev" />
+    <MESSAGE value="Add class dans les dossiers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add class dans les dossiers" />
   </component>
 </project>
