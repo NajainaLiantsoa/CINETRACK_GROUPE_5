@@ -2,7 +2,7 @@ package model;
 
 import java.time.LocalDate;
 
-public class User {
+public class Utilisateur {
      private int idUtilisateur;
     private String nomUtilisateur;
     private String emailUtilisateur;
@@ -12,7 +12,7 @@ public class User {
     private String statutUtilisateur;
 
 
-    public User(int idUtilisateur, String nomUtilisateur, String emailUtilisateur, String motDePasse, String roleUtilisateur, LocalDate dateCreation, String statutUtilisateur) {
+    public Utilisateur(int idUtilisateur, String nomUtilisateur, String emailUtilisateur, String motDePasse, String roleUtilisateur, LocalDate dateCreation, String statutUtilisateur) {
         this.idUtilisateur = idUtilisateur;
         this.nomUtilisateur = nomUtilisateur;
         this.emailUtilisateur = emailUtilisateur;
