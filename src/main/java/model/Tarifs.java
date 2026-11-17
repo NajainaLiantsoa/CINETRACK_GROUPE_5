@@ -1,4 +1,4 @@
-package modele;
+package model;
 
 public class Tarifs {
         private int idTarif;
