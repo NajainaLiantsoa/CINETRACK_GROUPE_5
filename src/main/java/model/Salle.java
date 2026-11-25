@@ -4,10 +4,10 @@ public class Salle {
        private int idSalle;
     private String nomSalle;
     private int capaciteSalle;
-    private String statutSalle;
+    private Boolean statutSalle;
 
 
-    public Salle(int idSalle, String nomSalle, int capaciteSalle, String statutSalle) {
+    public Salle(int idSalle, String nomSalle, int capaciteSalle, Boolean statutSalle) {
         this.idSalle = idSalle;
         this.nomSalle = nomSalle;
         this.capaciteSalle = capaciteSalle;
@@ -39,11 +39,11 @@ public class Salle {
         this.capaciteSalle = capaciteSalle;
     }
 
-    public String getStatutSalle() {
+    public Boolean getStatutSalle() {
         return this.statutSalle;
     }
 
-    public void setStatutSalle(String statutSalle) {
+    public void setStatutSalle(Boolean statutSalle) {
         this.statutSalle = statutSalle;
     }
 
