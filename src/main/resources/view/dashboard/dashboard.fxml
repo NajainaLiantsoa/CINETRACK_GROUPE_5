@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="720.0" prefWidth="1100.0" styleClass="root-layout" stylesheets="@../../assets/dashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashboardController">
+  <left>
+    <fx:include fx:id="sidebar" source="../layout/sidebar.fxml"/>
+  </left>
+
+  <center>
+    <ScrollPane fitToWidth="true" styleClass="content-scroll" BorderPane.alignment="CENTER">
+      <content>
+        <VBox spacing="18.0" styleClass="main-content">
+          <children>
+            <!-- En-tête de section -->
+            <HBox alignment="CENTER_LEFT" spacing="12.0">
+              <children>
+                <VBox spacing="2.0">
+                  <children>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="page-title" text="Tableau de bord"/>
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="page-subtitle" text="Synthèse journalière de l'établissement"/>
+                  </children>
+                </VBox>
+                <Pane HBox.hgrow="ALWAYS"/>
+                <Button mnemonicParsing="false" onAction="#onAjouterFilm" styleClass="btn-secondary" text="Nouveau film"/>
+                <Button mnemonicParsing="false" onAction="#onNouvelleSeance" styleClass="btn-primary" text="Nouvelle séance"/>
+              </children>
+            </HBox>
+            <!-- 4 Cartes d'indicateurs journaliers -->
+            <HBox spacing="14.0">
+              <children>
+                <!-- Indicateur 1 -->
+                <VBox spacing="4.0" styleClass="kpi-card" HBox.hgrow="ALWAYS">
+                  <children>
+                    <Label styleClass="kpi-label" text="Séances du jour"/>
+                    <Label fx:id="lblSeancesCount" styleClass="kpi-value" text="12"/>
+                    <Label styleClass="kpi-desc" text="programmées aujourd'hui"/>
+                  </children>
+                </VBox>
+                <!-- Indicateur 2 -->
+                <VBox spacing="4.0" styleClass="kpi-card" HBox.hgrow="ALWAYS">
+                  <children>
+                    <Label styleClass="kpi-label" text="Taux de remplissage"/>
+                    <Label fx:id="lblTauxOccupation" styleClass="kpi-value" text="74 %"/>
+                    <Label styleClass="kpi-desc" text="moyenne des salles"/>
+                  </children>
+                </VBox>
+                <!-- Indicateur 3 -->
+                <VBox spacing="4.0" styleClass="kpi-card" HBox.hgrow="ALWAYS">
+                  <children>
+                    <Label styleClass="kpi-label" text="Billets vendus"/>
+                    <Label fx:id="lblEntreesCount" styleClass="kpi-value" text="348"/>
+                    <Label styleClass="kpi-desc" text="sur 470 places disponibles"/>
+                  </children>
+                </VBox>
+                <!-- Indicateur 4 -->
+                <VBox spacing="4.0" styleClass="kpi-card" HBox.hgrow="ALWAYS">
+                  <children>
+                    <Label styleClass="kpi-label" text="Recettes du jour"/>
+                    <Label fx:id="lblRecetteJour" styleClass="kpi-value" text="3 250 €"/>
+                    <Label styleClass="kpi-desc" text="billetterie du jour"/>
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+            <!-- Contenu principal : Liste des séances à gauche, Raccourcis et salles à droite -->
+            <HBox spacing="16.0">
+              <children>
+                <!-- Panneau gauche : Séances du jour -->
+                <VBox spacing="12.0" styleClass="content-box" HBox.hgrow="ALWAYS">
+                  <children>
+                    <HBox alignment="CENTER_LEFT">
+                      <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="content-box-title" text="Séances du jour"/>
+                        <Pane HBox.hgrow="ALWAYS"/>
+                        <Button mnemonicParsing="false" onAction="#onNavigateSeances" styleClass="btn-secondary" text="Voir toutes les séances"/>
+                      </children>
+                    </HBox>
+                    <!-- Entête de colonnes -->
+                    <HBox alignment="CENTER_LEFT" styleClass="data-table-header">
+                      <children>
+                        <Label prefWidth="220.0" styleClass="data-table-header-cell" text="Film"/>
+                        <Label prefWidth="120.0" styleClass="data-table-header-cell" text="Salle"/>
+                        <Label prefWidth="80.0" styleClass="data-table-header-cell" text="Horaire"/>
+                        <Label prefWidth="100.0" styleClass="data-table-header-cell" text="Occupation"/>
+                        <Label alignment="CENTER_RIGHT" prefWidth="90.0" styleClass="data-table-header-cell" text="Statut"/>
+                      </children>
+                    </HBox>
+                    <!-- Ligne 1 -->
+                    <HBox alignment="CENTER_LEFT" styleClass="data-table-row">
+                      <children>
+                        <Label prefWidth="220.0" styleClass="data-cell-main" text="Inception (2h28)"/>
+                        <Label prefWidth="120.0" styleClass="data-cell-muted" text="Salle 1 - Grand Rex"/>
+                        <Label prefWidth="80.0" styleClass="data-cell-main" text="14:30"/>
+                        <Label prefWidth="100.0" styleClass="data-cell-muted" text="102 / 120 places"/>
+                        <HBox alignment="CENTER_RIGHT" prefWidth="90.0">
+                          <children>
+                            <Label styleClass="status-badge, status-active" text="En cours"/>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                    <!-- Ligne 2 -->
+                    <HBox alignment="CENTER_LEFT" styleClass="data-table-row">
+                      <children>
+                        <Label prefWidth="220.0" styleClass="data-cell-main" text="Dune : Deuxième Partie (2h46)"/>
+                        <Label prefWidth="120.0" styleClass="data-cell-muted" text="Salle 2 - IMAX"/>
+                        <Label prefWidth="80.0" styleClass="data-cell-main" text="16:00"/>
+                        <Label prefWidth="100.0" styleClass="data-cell-muted" text="105 / 150 places"/>
+                        <HBox alignment="CENTER_RIGHT" prefWidth="90.0">
+                          <children>
+                            <Label styleClass="status-badge, status-pending" text="À venir"/>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                    <!-- Ligne 3 -->
+                    <HBox alignment="CENTER_LEFT" styleClass="data-table-row">
+                      <children>
+                        <Label prefWidth="220.0" styleClass="data-cell-main" text="Oppenheimer (3h00)"/>
+                        <Label prefWidth="120.0" styleClass="data-cell-muted" text="Salle 3 - Studio"/>
+                        <Label prefWidth="80.0" styleClass="data-cell-main" text="18:15"/>
+                        <Label prefWidth="100.0" styleClass="data-cell-muted" text="48 / 60 places"/>
+                        <HBox alignment="CENTER_RIGHT" prefWidth="90.0">
+                          <children>
+                            <Label styleClass="status-badge, status-pending" text="À venir"/>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                    <!-- Ligne 4 -->
+                    <HBox alignment="CENTER_LEFT" styleClass="data-table-row">
+                      <children>
+                        <Label prefWidth="220.0" styleClass="data-cell-main" text="Interstellar (2h49)"/>
+                        <Label prefWidth="120.0" styleClass="data-cell-muted" text="Salle 1 - Grand Rex"/>
+                        <Label prefWidth="80.0" styleClass="data-cell-main" text="20:45"/>
+                        <Label prefWidth="100.0" styleClass="data-cell-muted" text="35 / 120 places"/>
+                        <HBox alignment="CENTER_RIGHT" prefWidth="90.0">
+                          <children>
+                            <Label styleClass="status-badge, status-pending" text="À venir"/>
+                          </children>
+                        </HBox>
+                      </children>
+                    </HBox>
+                  </children>
+                </VBox>
+                <!-- Panneau droit : Raccourcis et occupation -->
+                <VBox prefWidth="300.0" spacing="14.0">
+                  <children>
+                    <!-- Raccourcis -->
+                    <VBox spacing="8.0" styleClass="content-box">
+                      <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="content-box-title" text="Actions rapides"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNouvelleSeance" styleClass="action-link-btn" text="Programmer une séance"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onAjouterFilm" styleClass="action-link-btn" text="Ajouter un film"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNavigateTarifs" styleClass="action-link-btn" text="Modifier les tarifs"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNavigateSalles" styleClass="action-link-btn" text="Plan des salles"/>
+                      </children>
+                    </VBox>
+                    <!-- Salles -->
+                    <VBox spacing="6.0" styleClass="content-box">
+                      <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="content-box-title" text="Salles de cinéma"/>
+                        <HBox alignment="CENTER_LEFT" styleClass="room-item">
+                          <children>
+                            <Label styleClass="data-cell-main" text="Salle 1 - Grand Rex" HBox.hgrow="ALWAYS"/>
+                            <Pane HBox.hgrow="ALWAYS"/>
+                            <Label styleClass="data-cell-muted" text="120 places"/>
+                          </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="room-item">
+                          <children>
+                            <Label styleClass="data-cell-main" text="Salle 2 - IMAX" HBox.hgrow="ALWAYS"/>
+                            <Pane HBox.hgrow="ALWAYS"/>
+                            <Label styleClass="data-cell-muted" text="150 places"/>
+                          </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" styleClass="room-item">
+                          <children>
+                            <Label styleClass="data-cell-main" text="Salle 3 - Studio" HBox.hgrow="ALWAYS"/>
+                            <Pane HBox.hgrow="ALWAYS"/>
+                            <Label styleClass="data-cell-muted" text="60 places"/>
+                          </children>
+                        </HBox>
+                      </children>
+                    </VBox>
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+      </content>
+    </ScrollPane>
+  </center>
+</BorderPane>

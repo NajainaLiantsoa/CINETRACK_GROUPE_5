@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Palette de couleurs :
+     - Blanc pur     : #FFFFFF (Couleur principale claire)
+     - Bleu marine   : #0B1F3A (Accentuation principale, titres, boutons)
+     - Or champagne  : #D4AF37 (Accent discret, bordure de sélection)
+     - Beige ivoire  : #F5F0E8 (Fond de page doux)
+     - Argent doux   : #C0C0C0 (Bordures douces et séparateurs)
+   ========================================================================== */
+
+/* Conteneur principal */
+.root-layout {
+    -fx-background-color: #F5F0E8;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* ==========================================================================
+   BARRE LATÉRALE (SIDEBAR)
+   ========================================================================== */
+.sidebar {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 0 1px 0 0;
+    -fx-padding: 20px 12px;
+}
+
+.brand-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #0B1F3A;
+}
+
+.brand-subtitle {
+    -fx-font-size: 11px;
+    -fx-fill: #666666;
+}
+
+.nav-section-title {
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #888888;
+    -fx-padding: 12px 10px 4px 10px;
+}
+
+/* Éléments de menu simples et humains (sans emoji) */
+.nav-item {
+    -fx-background-color: transparent;
+    -fx-text-fill: #333333;
+    -fx-font-size: 13px;
+    -fx-alignment: center-left;
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 4px;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3px;
+    -fx-cursor: hand;
+}
+
+.nav-item:hover {
+    -fx-background-color: #F5F0E8;
+    -fx-text-fill: #0B1F3A;
+}
+
+.nav-item-active {
+    -fx-background-color: #F5F0E8;
+    -fx-text-fill: #0B1F3A;
+    -fx-font-weight: bold;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 0 0 0 3px;
+}
+
+/* Profil utilisateur bas de sidebar */
+.user-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px 0 0 0;
+    -fx-padding: 12px 6px 0 6px;
+}
+
+.user-name {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0B1F3A;
+}
+
+.user-role {
+    -fx-font-size: 11px;
+    -fx-text-fill: #666666;
+}
+
+.btn-logout {
+    -fx-background-color: transparent;
+    -fx-text-fill: #B00020;
+    -fx-font-size: 12px;
+    -fx-alignment: center-left;
+    -fx-padding: 4px 0 0 0;
+    -fx-cursor: hand;
+    -fx-underline: false;
+}
+
+.btn-logout:hover {
+    -fx-underline: true;
+}
+
+/* ==========================================================================
+   ZONE DE CONTENU
+   ========================================================================== */
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.main-content {
+    -fx-padding: 24px 28px;
+}
+
+.page-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #0B1F3A;
+}
+
+.page-subtitle {
+    -fx-font-size: 12px;
+    -fx-fill: #666666;
+}
+
+/* Boutons d'action */
+.btn-primary {
+    -fx-background-color: #0B1F3A;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 14px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #143158;
+}
+
+.btn-secondary {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #0B1F3A;
+    -fx-font-size: 12px;
+    -fx-background-radius: 4px;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-padding: 7px 13px;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #F5F0E8;
+}
+
+/* ==========================================================================
+   CARTES D'INDICATEURS (KPI)
+   ========================================================================== */
+.kpi-card {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 14px 16px;
+}
+
+.kpi-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+}
+
+.kpi-value {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0B1F3A;
+}
+
+.kpi-desc {
+    -fx-font-size: 11px;
+    -fx-text-fill: #888888;
+}
+
+/* ==========================================================================
+   PANNEAUX PRINCIPAUX (CARTES BLANCHES)
+   ========================================================================== */
+.content-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 16px 18px;
+}
+
+.content-box-title {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-fill: #0B1F3A;
+}
+
+/* Tableaux et lignes de données sobres */
+.data-table-header {
+    -fx-background-color: #F5F0E8;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px 0 1px 0;
+    -fx-padding: 8px 10px;
+}
+
+.data-table-header-cell {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0B1F3A;
+}
+
+.data-table-row {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #ECE8E0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-padding: 9px 10px;
+}
+
+.data-table-row:hover {
+    -fx-background-color: #FAF8F5;
+}
+
+.data-cell-main {
+    -fx-font-size: 12px;
+    -fx-text-fill: #111111;
+}
+
+.data-cell-muted {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666666;
+}
+
+/* Statuts sobres */
+.status-badge {
+    -fx-font-size: 11px;
+    -fx-padding: 2px 6px;
+    -fx-background-radius: 3px;
+    -fx-font-weight: bold;
+}
+
+.status-active {
+    -fx-background-color: #EBF3ED;
+    -fx-text-fill: #1B5E20;
+}
+
+.status-pending {
+    -fx-background-color: #FDF4E7;
+    -fx-text-fill: #8D5300;
+}
+
+/* Boutons d'accès rapide */
+.action-link-btn {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-alignment: center-left;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #0B1F3A;
+    -fx-cursor: hand;
+}
+
+.action-link-btn:hover {
+    -fx-background-color: #F5F0E8;
+    -fx-border-color: #0B1F3A;
+}
+
+.room-item {
+    -fx-padding: 6px 0;
+    -fx-border-color: #ECE8E0;
+    -fx-border-width: 0 0 1px 0;
+}

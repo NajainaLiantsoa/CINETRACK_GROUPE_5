@@ -1,0 +1,105 @@
+/* ==========================================================================
+   Palette de couleurs :
+     - Blanc pur     : #FFFFFF (Couleur principale claire)
+     - Bleu marine   : #0B1F3A (Couleur d'accentuation principale / boutons / titres)
+     - Or champagne  : #D4AF37 (Détails élégants / bordures de focus / hover)
+     - Beige ivoire  : #F5F0E8 (Fond secondaire doux)
+     - Argent doux   : #C0C0C0 (Bordures douces / séparateurs / placeholders)
+   ========================================================================== */
+
+/* Conteneur racine */
+.root-container {
+    -fx-background-color: #F5F0E8;
+    -fx-font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Carte centrale rectangulaire */
+.login-card {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+    -fx-padding: 24px 38px 20px 38px;
+    -fx-effect: dropshadow(gaussian, rgba(11, 31, 58, 0.07), 18, 0.1, 0, 6);
+}
+
+/* Titres & Sous-titres */
+.app-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-fill: #0B1F3A;
+}
+
+.app-subtitle {
+    -fx-font-size: 12px;
+    -fx-fill: #5A6270;
+}
+
+/* Champs de saisie & labels */
+.field-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0B1F3A;
+}
+
+.text-input-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 8px 12px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #0B1F3A;
+    -fx-prompt-text-fill: #8E95A5;
+}
+
+.text-input-field:focused {
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(gaussian, rgba(212, 175, 55, 0.22), 5, 0.15, 0, 0);
+}
+
+/* Bouton principal de connexion */
+.btn-primary {
+    -fx-background-color: #0B1F3A;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-padding: 10px 20px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(11, 31, 58, 0.12), 6, 0, 0, 2);
+}
+
+.btn-primary:hover {
+    -fx-background-color: #143158;
+    -fx-border-color: #D4AF37;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1px;
+}
+
+.btn-primary:pressed {
+    -fx-background-color: #071527;
+}
+
+/* Message de statut / erreur */
+.status-message {
+    -fx-font-size: 12px;
+    -fx-text-fill: #D32F2F;
+    -fx-wrap-text: true;
+}
+
+/* Séparateur et pied de page */
+.card-divider {
+    -fx-background-color: #E8E4DC;
+    -fx-max-height: 1px;
+    -fx-pref-height: 1px;
+}
+
+.footer-text {
+    -fx-font-size: 11px;
+    -fx-fill: #8E95A5;
+}

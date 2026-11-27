@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefWidth="220.0" spacing="6.0" styleClass="sidebar" stylesheets="@../../assets/sidebar.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SidebarController">
+   <children>
+      <!-- En-tête CineTrack -->
+      <VBox spacing="2.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="brand-title" text="CineTrack" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="brand-subtitle" text="Système de gestion de cinéma" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="14.0" left="8.0" top="4.0" />
+         </VBox.margin>
+      </VBox>
+
+      <Label styleClass="nav-section-title" text="GESTION" />
+
+      <Button fx:id="btnDashboard" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNavigateDashboard" styleClass="nav-item" text="Tableau de bord" />
+      <Button fx:id="btnFilms" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNavigateFilms" styleClass="nav-item" text="Films" />
+      <Button fx:id="btnSeances" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNavigateSeances" styleClass="nav-item" text="Séances" />
+      <Button fx:id="btnSalles" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNavigateSalles" styleClass="nav-item" text="Salles et places" />
+      <Button fx:id="btnTarifs" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNavigateTarifs" styleClass="nav-item" text="Tarification" />
+      <Button fx:id="btnReservations" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onNavigateReservations" styleClass="nav-item" text="Réservations" />
+
+      <Pane VBox.vgrow="ALWAYS" />
+
+      <!-- Compte utilisateur & Déconnexion -->
+      <VBox spacing="4.0" styleClass="user-box">
+         <children>
+            <Label fx:id="lblUtilisateur" styleClass="user-name" text="Administrateur" />
+            <Label styleClass="user-role" text="Session active" />
+            <Button mnemonicParsing="false" onAction="#onDeconnexion" styleClass="btn-logout" text="Se déconnecter" />
+         </children>
+      </VBox>
+   </children>
+</VBox>

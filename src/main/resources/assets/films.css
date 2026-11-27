@@ -1,0 +1,183 @@
+/* ==========================================================================
+   Palette :
+     - Blanc pur     : #FFFFFF (Fond principal des tables, cartes et champs)
+     - Bleu marine   : #0B1F3A (Accentuation, boutons principaux, titres)
+     - Or champagne  : #D4AF37 (Hover, focus, accentuation)
+     - Beige ivoire  : #F5F0E8 (Fond global doux)
+     - Argent doux   : #C0C0C0 (Bordures douces, séparateurs)
+   ========================================================================== */
+
+/* Conteneur global */
+.root-layout {
+    -fx-background-color: #F5F0E8;
+    -fx-font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.content-scroll {
+    -fx-background-color: transparent;
+    -fx-background: transparent;
+    -fx-border-color: transparent;
+}
+
+.main-content {
+    -fx-padding: 24px 28px;
+}
+
+/* Titres */
+.page-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-fill: #0B1F3A;
+}
+
+.page-subtitle {
+    -fx-font-size: 12px;
+    -fx-fill: #666666;
+}
+
+/* Panneaux blancs */
+.content-box {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 16px 18px;
+}
+
+.box-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0B1F3A;
+}
+
+/* Boutons */
+.btn-primary {
+    -fx-background-color: #0B1F3A;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 4px;
+    -fx-padding: 8px 14px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #143158;
+}
+
+.btn-secondary {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #0B1F3A;
+    -fx-font-size: 12px;
+    -fx-background-radius: 4px;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-padding: 7px 13px;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #F5F0E8;
+}
+
+.btn-danger {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #B00020;
+    -fx-font-size: 12px;
+    -fx-background-radius: 4px;
+    -fx-border-color: #E0B4B4;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-padding: 7px 13px;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: #FDEDED;
+}
+
+/* Champs de formulaire et filtres */
+.field-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0B1F3A;
+}
+
+.form-input {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-padding: 7px 10px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #111111;
+}
+
+.form-input:focused {
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1.5px;
+}
+
+/* TableView personnalisée sobre */
+.table-view {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 4px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #F5F0E8;
+    -fx-border-color: #C0C0C0;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 34px;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #0B1F3A;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #ECE8E0;
+    -fx-border-width: 0 0 1px 0;
+    -fx-cell-size: 36px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #FCFBF9;
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #F5F0E8;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #E8E2D6;
+    -fx-text-fill: #0B1F3A;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: #0B1F3A;
+}
+
+/* Badges de genre */
+.genre-badge {
+    -fx-background-color: #F5F0E8;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1px;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-padding: 2px 6px;
+    -fx-font-size: 11px;
+    -fx-text-fill: #0B1F3A;
+}
